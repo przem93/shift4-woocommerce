@@ -12,7 +12,7 @@
  * Text Domain: shift4-for-woocommerce
  * Requires PHP: 8.0
  * Requires at least: 6.7
- * WC tested up to: 10.0.2
+ * WC tested up to: 11.0.1
  */
 
 if (!defined('ABSPATH')) exit;
