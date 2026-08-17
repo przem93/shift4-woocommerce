@@ -110,6 +110,10 @@ For testing your integration you first need a Shift4 development account which y
 
 ## Changelog
 
+2026-08-17 - version 1.0.15
+* Tested up to WordPress 7.1 and WooCommerce 11.0.1.
+* Improved: Aligned POST data handling with WordPress coding standards (Plugin Check) — canonical ABSPATH guards, wp_unslash and validation of POST reads.
+
 2026-04-02 - version 1.0.14
 * Fixed: Prevent infinite loop when submitting add-payment-method and order-review forms by using native DOM submit instead of jQuery submit after tokenization.
 
