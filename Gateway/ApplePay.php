@@ -102,7 +102,7 @@ class ApplePay extends \WC_Payment_Gateway
      */
     public function validate_fields()
     {
-        $shift4_applepay_token = sanitize_text_field($_POST[SHIFT4_APPLE_PAY_TOKEN]);
+        $shift4_applepay_token = isset($_POST[SHIFT4_APPLE_PAY_TOKEN]) ? sanitize_text_field(wp_unslash($_POST[SHIFT4_APPLE_PAY_TOKEN])) : '';
         if (empty($shift4_applepay_token)) {
             // Parent method says to return false but that doesn't abort the checkout process, an exception is needed
             $this->logger->debug(__METHOD__ . ' failed validation');

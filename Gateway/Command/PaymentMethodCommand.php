@@ -23,9 +23,9 @@ class PaymentMethodCommand
         $gateway = $this->gatewayFactory->get();
         $applePay = new PaymentMethodRequestApplePay();
 
-        $apple_pay_token = sanitize_text_field($_POST[SHIFT4_APPLE_PAY_TOKEN]);
+        $apple_pay_token = isset($_POST[SHIFT4_APPLE_PAY_TOKEN]) ? sanitize_text_field(wp_unslash($_POST[SHIFT4_APPLE_PAY_TOKEN])) : '';
 
-        $applePay->token(json_decode(stripslashes($apple_pay_token)));
+        $applePay->token(json_decode($apple_pay_token));
 
         $paymentMethodRequest = new PaymentMethodRequest();
         $paymentMethodRequest->type('apple_pay');

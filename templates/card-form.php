@@ -1,4 +1,4 @@
-<?php defined('ABSPATH') or exit ?>
+<?php if (!defined('ABSPATH')) exit; ?>
 <div id="shift4-payment-form"
     data-amount="<?php echo esc_html($orderTotal); ?>"
     data-currency="<?php echo esc_html(get_woocommerce_currency()); ?>">

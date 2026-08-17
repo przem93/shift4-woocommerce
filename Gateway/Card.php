@@ -138,7 +138,7 @@ class Card extends \WC_Payment_Gateway_CC
     }
 
     private function sanitize_post_prop($prop_name) {
-        return isset($_POST[$prop_name]) ? sanitize_text_field($_POST[$prop_name]) : null;
+        return isset($_POST[$prop_name]) ? sanitize_text_field(wp_unslash($_POST[$prop_name])) : null;
     }
 
     private function get_card_payment_token() {
